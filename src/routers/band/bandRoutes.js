@@ -12,7 +12,7 @@ const bandRouter = express.Router();
 bandRouter.route('/band').get(getAllBands).post(createBand);
 
 bandRouter
-  .route('/user/:id')
+  .route('/band/:id')
   .get(getBandById)
   .patch(updateBand)
   .delete(deleteBand);
