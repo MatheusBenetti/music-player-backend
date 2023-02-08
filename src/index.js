@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import userRouter from './routers/user/userRoutes.js';
 import bodyParser from 'body-parser';
+import bandRouter from './routers/band/bandRoutes.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(
   })
 );
 app.use('/api/v1/spotify', userRouter);
+app.use('/api/v1/spotify', bandRouter);
 
 mongoose
   .set({ strictQuery: false })
