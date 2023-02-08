@@ -11,6 +11,6 @@ const bandSchema = new mongoose.Schema({
 });
 
 // eslint-disable-next-line import/prefer-default-export
-const Band = mongoose.model('User', bandSchema);
+const Band = mongoose.model('Band', bandSchema);
 
 export default Band;
