@@ -5,7 +5,7 @@ import {
   getAllBands,
   getBandById,
   updateBand
-} from '../../controllers/band/bandController';
+} from '../../controllers/band/bandController.js';
 
 const bandRouter = express.Router();
 

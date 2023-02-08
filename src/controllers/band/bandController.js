@@ -1,4 +1,4 @@
-import Band from '../../models/bandModel';
+import Band from '../../models/bandModel.js';
 
 export const getAllBands = async (req, res) => {
   try {
