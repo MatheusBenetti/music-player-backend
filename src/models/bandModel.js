@@ -8,7 +8,13 @@ const bandSchema = new mongoose.Schema({
   },
   genre: {
     type: String
-  }
+  },
+  members: [
+    {
+      type: String,
+      required: [true, 'Please enter the name of the members.']
+    }
+  ]
 });
 
 // eslint-disable-next-line import/prefer-default-export
