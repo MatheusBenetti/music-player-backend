@@ -2,9 +2,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import userRouter from './routers/user/userRoutes.js';
 import bodyParser from 'body-parser';
+import userRouter from './routers/user/userRoutes.js';
 import bandRouter from './routers/band/bandRoutes.js';
+import albumRouter from './routers/album/albumRoutes.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(
 );
 app.use('/api/v1/spotify', userRouter);
 app.use('/api/v1/spotify', bandRouter);
+app.use('/api/v1/spotify', albumRouter);
 
 mongoose
   .set({ strictQuery: false })
