@@ -3,8 +3,7 @@ import mongoose from 'mongoose';
 const albumSchema = new mongoose.Schema({
   albumName: {
     type: String,
-    required: [true, 'Please enter your album name.'],
-    unique: true
+    required: [true, 'Please enter your album name.']
   },
   genre: {
     type: String
