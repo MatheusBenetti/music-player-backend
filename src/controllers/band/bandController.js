@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import Band from '../../models/bandModel.js';
 
 export const getAllBands = async (req, res) => {
@@ -61,7 +62,7 @@ export const updateBand = async (req, res) => {
     });
 
     if (!band) {
-      throw new Error('User not found.');
+      throw new Error('Band not found.');
     }
 
     res.status(200).json({
@@ -81,7 +82,7 @@ export const deleteBand = async (req, res) => {
     const band = await Band.findByIdAndDelete(req.params.id);
 
     if (!band) {
-      throw new Error('User not found.');
+      throw new Error('Band not found.');
     }
 
     res.status(200).json({

@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import User from '../../models/userModel.js';
 
 export const getAllUsers = async (req, res) => {
@@ -21,12 +22,12 @@ export const getAllUsers = async (req, res) => {
 
 export const getUserById = async (req, res) => {
   try {
-    const users = await User.findById(req.params.id);
+    const user = await User.findById(req.params.id);
 
     res.status(200).json({
       status: 'Success.',
       data: {
-        users
+        user
       }
     });
   } catch (err) {
